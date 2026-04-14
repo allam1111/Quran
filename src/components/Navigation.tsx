@@ -9,10 +9,10 @@ export function Navigation() {
   const { state, updateState } = useEditor();
 
   const tabs = [
-    { id: "video" as const, label: "صانع الفيديو", icon: Video },
     { id: "mushaf" as const, label: "المصحف الشريف", icon: BookOpen },
     { id: "library" as const, label: "المكتبة الصوتية", icon: Headphones },
     { id: "prayers" as const, label: "مواقيت الصلاة", icon: Clock },
+    { id: "video" as const, label: "صانع الفيديو", icon: Video },
   ];
 
   return (
