@@ -21,11 +21,25 @@ export default function Home() {
 
   return (
     <div className="flex flex-col h-screen bg-[#050505] overflow-hidden font-arabic islamic-pattern select-none">
+      {/* Fixed Top Bar: Logo + Install + Developer Credit */}
+      <div className="fixed top-0 left-0 right-0 z-[70] bg-black/90 backdrop-blur-xl border-b border-white/5 px-4 py-2 flex items-center justify-between">
+        <div className="flex items-center gap-3">
+          <img src="/app-logo.png" alt="قرآن" className="w-8 h-8 rounded-lg object-cover" />
+          <span className="text-sm font-bold text-white font-arabic">قرآن</span>
+        </div>
+        <div className="flex items-center gap-3">
+          <PWAInstallButton />
+          <p className="text-[8px] text-white/30 font-bold tracking-wider uppercase">
+            by <a href="https://www.instagram.com/youssef_osama04?igsh=MXV2Y2o5MzE0d2c1dA==" target="_blank" rel="noopener noreferrer" className="text-primary/60 hover:text-primary">Youssef</a>
+          </p>
+        </div>
+      </div>
+
       {/* Universal Navigation */}
       <Navigation />
 
       {/* Main Content Area */}
-      <main className="flex-1 flex overflow-hidden mt-14 md:mt-20 mb-20 md:mb-0">
+      <main className="flex-1 flex overflow-hidden mt-24 md:mt-[5.5rem] mb-20 md:mb-0">
         {state.view === "video" && (
           <div className="flex flex-1 overflow-hidden animate-in fade-in duration-700">
             {/* Sidebar Controls - Right side for Arabic RTL */}
@@ -159,18 +173,7 @@ export default function Home() {
         )}
       </main>
 
-      {/* Developer Credit */}
-      <div className="fixed bottom-2 left-6 z-[60] opacity-30 hover:opacity-100 transition-opacity hidden md:block">
-        <p className="text-[10px] text-white font-bold tracking-widest uppercase">
-          Developed by <a href="https://www.instagram.com/youssef_osama04?igsh=MXV2Y2o5MzE0d2c1dA==" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Youssef</a>
-        </p>
-      </div>
 
-      <div className="md:hidden flex justify-center pb-2 absolute bottom-[72px] w-full z-40 opacity-40">
-        <p className="text-[8px] text-white font-bold tracking-widest uppercase">
-          Developed by <a href="https://www.instagram.com/youssef_osama04?igsh=MXV2Y2o5MzE0d2c1dA==" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Youssef</a>
-        </p>
-      </div>
 
       {/* Render Progress Modal */}
       <RenderModal 

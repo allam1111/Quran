@@ -40,14 +40,10 @@ export function PWAInstallButton() {
   return (
     <button
       onClick={handleInstall}
-      className="w-full flex items-center gap-4 bg-primary text-black p-5 rounded-2xl transition-all hover:scale-[1.02] active:scale-[0.98] shadow-xl shadow-primary/20 font-bold"
+      className="flex items-center gap-2 bg-primary text-black px-4 py-2 rounded-xl transition-all hover:scale-105 active:scale-95 shadow-lg shadow-primary/20 font-bold text-xs font-arabic"
     >
-      <div className="w-10 h-10 rounded-xl bg-black/10 flex items-center justify-center">
-        <Download className="w-5 h-5" />
-      </div>
-      <div className="flex-1 text-right">
-        <p className="text-sm font-arabic">تنزيل التطبيق الآن</p>
-      </div>
+      <Download className="w-4 h-4" />
+      <span>تثبيت التطبيق</span>
     </button>
   );
 }
