@@ -16,7 +16,7 @@ export function Navigation() {
   ];
 
   return (
-    <nav className="fixed bottom-0 left-0 right-0 z-50 md:top-0 md:bottom-auto md:w-full bg-black/80 backdrop-blur-2xl border-t md:border-t-0 md:border-b border-white/10 px-6 py-2 md:py-4">
+    <nav className="fixed bottom-0 left-0 right-0 z-50 w-full bg-black/80 backdrop-blur-2xl border-t border-white/10 px-6 py-2 md:py-4">
       <div className="max-w-screen-xl mx-auto flex items-center justify-around md:justify-center md:gap-12">
         {tabs.map((tab) => {
           const isActive = state.view === tab.id;

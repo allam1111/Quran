@@ -69,35 +69,10 @@ export function Mushaf() {
     return (
       <div className="flex flex-col h-full bg-[#050505] animate-in fade-in duration-500 overflow-hidden">
         {/* Compact Header with Search */}
-        <header className="p-6 md:px-12 border-b border-white/5 bg-[#050505]/40 backdrop-blur-xl shrink-0">
-            <div className="flex flex-col md:flex-row items-center justify-between gap-4 max-w-7xl mx-auto">
-                <div className="flex items-center gap-4">
-                  <h1 className="text-xl font-bold text-white font-arabic">قرآن</h1>
-                  <button 
-                    onClick={async () => {
-                      alert("جاري تحميل نصوص المصحف بالكامل... قد يستغرق ذلك دقيقة.");
-                      for (let i = 1; i <= 114; i++) {
-                        await fetch(`https://api.quran.com/api/v4/verses/by_chapter/${i}?language=ar&words=false&fields=text_uthmani&translations=131&per_page=500`);
-                        console.log(`Cached Surah ${i}`);
-                      }
-                      alert("تم تحميل المصحف كاملاً بنجاح! التطبيق الآن يعمل 100% بدون إنترنت للقراءة.");
-                    }}
-                    className="px-3 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-[10px] text-primary font-bold hover:bg-primary hover:text-black transition-all"
-                  >
-                    تحميل للقراءة بدون نت ↓
-                  </button>
-                </div>
-                <div className="w-full md:w-80 relative group">
-                    <Search className="absolute right-4 top-1/2 -translate-y-1/2 text-primary/40 group-focus-within:text-primary transition-all w-4 h-4" />
-                    <input 
-                        value={search}
-                        onChange={(e) => setSearch(e.target.value)}
-                        placeholder="ابحث عن السورة..."
-                        className="w-full bg-white/[0.03] border border-white/10 rounded-xl py-3 pr-11 pl-4 text-white outline-none focus:border-primary/50 transition-all text-right font-arabic text-sm"
-                    />
-                </div>
-            </div>
-        </header>
+        {/* Redundant header hidden as requested to use the new fixed top bar instead */}
+        {/* <header className="p-6 md:px-12 border-b border-white/5 bg-[#050505]/40 backdrop-blur-xl shrink-0">
+             ... header content ...
+        </header> */}
 
         {/* Scrollable Content */}
         <div className="flex-1 overflow-y-auto p-6 md:p-12 no-scrollbar">
