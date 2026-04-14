@@ -8,7 +8,7 @@ export const RemotionRoot: React.FC = () => {
     <>
       <Composition
         id="QuranVideo"
-        component={MainVideo as React.ComponentType<Record<string, unknown>>}
+        component={MainVideo as unknown as React.ComponentType<Record<string, unknown>>}
         durationInFrames={300}
         fps={30}
         width={1080}
