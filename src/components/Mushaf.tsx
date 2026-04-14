@@ -132,7 +132,7 @@ export function Mushaf() {
                             className={`group relative flex flex-col items-center gap-3 transition-all duration-300 hover:-translate-y-1 active:scale-95 ${state.bookmark?.surahId === surah.id.toString() ? 'ring-2 ring-primary rounded-xl' : ''}`}
                         >
                              <div 
-                                className="aspect-[3/4.2] w-full bg-black/30 rounded-xl border-l-4 border-[#d4af37]/40 shadow-xl relative overflow-hidden flex flex-col items-center justify-center p-3"
+                                className="aspect-[3/4.2] w-full bg-transparent rounded-xl border-l-4 border-[#d4af37]/40 shadow-xl relative overflow-hidden flex flex-col items-center justify-center p-3"
                                 style={{
                                     backgroundImage: "url('/mushaf-cover.png')",
                                     backgroundSize: "cover",
