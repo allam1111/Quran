@@ -131,7 +131,15 @@ export function Mushaf() {
                             onClick={() => setSelectedSurah(surah.id.toString())}
                             className={`group relative flex flex-col items-center gap-3 transition-all duration-300 hover:-translate-y-1 active:scale-95 ${state.bookmark?.surahId === surah.id.toString() ? 'ring-2 ring-primary rounded-xl' : ''}`}
                         >
-                            <div className="aspect-[3/4.2] w-full bg-[#0a2e1f] rounded-xl border-l-4 border-[#d4af37]/30 shadow-xl relative overflow-hidden flex flex-col items-center justify-center p-3">
+                             <div 
+                                className="aspect-[3/4.2] w-full bg-[#050505] rounded-xl border-l-4 border-[#d4af37]/30 shadow-xl relative overflow-hidden flex flex-col items-center justify-center p-3"
+                                style={{
+                                    backgroundImage: "url('/mushaf-cover.png')",
+                                    backgroundSize: "cover",
+                                    backgroundPosition: "center",
+                                    backgroundBlendMode: "overlay"
+                                }}
+                            >
                                 <div className="absolute inset-2 border border-[#d4af37]/10 rounded-lg" />
                                 <div className="relative z-10 w-16 h-16 border border-[#d4af37]/20 rounded-full flex flex-col items-center justify-center bg-black/20 backdrop-blur-sm group-hover:border-[#d4af37]/60 transition-all">
                                     <span className="text-lg font-bold text-[#d4af37] font-arabic">{surah.name}</span>
