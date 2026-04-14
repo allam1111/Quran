@@ -187,10 +187,17 @@ export function AudioLibrary() {
         {/* Cover Art */}
         <div className="relative mb-6">
           <div className="absolute inset-0 bg-primary/20 blur-[80px] rounded-full opacity-40" />
-          <div className="aspect-[3/4] w-56 md:w-72 bg-[#0a2e1f] rounded-[2.5rem] border-l-[8px] border-[#d4af37] shadow-[0_40px_80px_rgba(0,0,0,0.8)] relative overflow-hidden">
+          <div 
+            className="aspect-[3/4] w-56 md:w-72 bg-[#050505] rounded-[2.5rem] border-l-[8px] border-[#d4af37] shadow-[0_40px_80px_rgba(0,0,0,0.8)] relative overflow-hidden flex flex-col items-center justify-center p-3"
+            style={{
+                backgroundImage: "url('/library-bg.png')",
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+            }}
+          >
             <div className="absolute inset-4 border-2 border-[#d4af37]/15 rounded-[1.5rem]" />
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-28 h-28 border border-[#d4af37]/20 rounded-full flex items-center justify-center bg-black/30 backdrop-blur-md">
-              <span className="text-3xl font-bold text-[#d4af37]">{currentSurah.name}</span>
+            <div className="relative z-10 w-28 h-28 border border-[#d4af37]/20 rounded-full flex items-center justify-center bg-black/20 backdrop-blur-md">
+              <span className="text-3xl font-bold text-black font-arabic">{currentSurah.name}</span>
             </div>
             {isPlaying && (
               <div className="absolute bottom-5 left-1/2 -translate-x-1/2 flex gap-[3px] h-4 items-end">

@@ -141,7 +141,7 @@ export function Mushaf() {
                             >
                                 <div className="absolute inset-2 border border-[#d4af37]/10 rounded-lg" />
                                 <div className="relative z-10 w-16 h-16 border border-[#d4af37]/20 rounded-full flex flex-col items-center justify-center bg-black/20 backdrop-blur-sm group-hover:border-[#d4af37]/60 transition-all">
-                                    <span className="text-lg font-bold text-[#d4af37] font-arabic">{surah.name}</span>
+                                    <span className="text-lg font-bold text-black font-arabic">{surah.name}</span>
                                 </div>
                                 <div className="absolute bottom-4 text-center">
                                     <p className="text-[#d4af37]/40 text-[9px] font-bold uppercase tracking-widest">{surah.id}</p>
