@@ -14,8 +14,8 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Quran Studio | صانع فيديوهات القرآن والورد اليومي",
-    template: "%s | Quran Studio"
+    default: "قرآن",
+    template: "%s | قرآن"
   },
   description: "استوديو احترافي لتصميم فيديوهات القرآن الكريم، الاستماع للمشايخ، متابعة مواقيت الصلاة، وقراءة الورد اليومي. كل ما تحتاجه في تطبيق واحد وبجودة عالية.",
   keywords: [
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   creator: "Quran Studio",
   publisher: "Quran Studio",
   openGraph: {
-    title: "Quran Studio - صانع فيديوهات القرآن",
+    title: "قرآن",
     description: "استوديو احترافي لتصميم فيديوهات القرآن الكريم، الاستماع للمشايخ، ومتابعة مواقيت الصلاة.",
     siteName: "Quran Studio",
     locale: "ar_EG",
@@ -35,14 +35,14 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Quran Studio - صانع فيديوهات القرآن",
+    title: "قرآن",
     description: "صمم فيديوهات القرآن الخاصة بك وتابع وردك اليومي بسهولة.",
   },
   manifest: "/manifest.json",
   appleWebApp: {
     capable: true,
     statusBarStyle: "default",
-    title: "Quran Studio",
+    title: "قرآن",
   },
 };
 

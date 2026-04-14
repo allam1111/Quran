@@ -1,8 +1,8 @@
 {
-  "name": "Quran Studio - استوديو صانع فيديوهات القرآن",
-  "short_name": "Quran Studio",
+  "name": "قرآن",
+  "short_name": "قرآن",
   "description": "استوديو احترافي لتصميم فيديوهات القرآن الكريم، الاستماع للمشايخ، ومتابعة الورد اليومي.",
-  "id": "quran-studio-app-allam",
+  "id": "quran-app-simplified",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",

@@ -72,7 +72,7 @@ export function Mushaf() {
         <header className="p-6 md:px-12 border-b border-white/5 bg-[#050505]/40 backdrop-blur-xl shrink-0">
             <div className="flex flex-col md:flex-row items-center justify-between gap-4 max-w-7xl mx-auto">
                 <div className="flex items-center gap-4">
-                  <h1 className="text-xl font-bold text-white font-arabic">المصحف الشريف</h1>
+                  <h1 className="text-xl font-bold text-white font-arabic">قرآن</h1>
                   <button 
                     onClick={async () => {
                       alert("جاري تحميل نصوص المصحف بالكامل... قد يستغرق ذلك دقيقة.");
