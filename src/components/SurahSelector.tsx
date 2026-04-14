@@ -36,6 +36,15 @@ export function SurahSelector() {
     }
   }, [state.surahId, state.startAyah, state.endAyah, updateState]);
 
+  const [startInput, setStartInput] = useState(state.startAyah.toString());
+  const [endInput, setEndInput] = useState(state.endAyah.toString());
+
+  // Sync back if global state changes (e.g. surah changed)
+  useEffect(() => {
+    setStartInput(state.startAyah.toString());
+    setEndInput(state.endAyah.toString());
+  }, [state.startAyah, state.endAyah]);
+
   return (
     <div className="flex flex-col gap-4">
       <div className="flex flex-col gap-1.5">
@@ -66,10 +75,13 @@ export function SurahSelector() {
               type="number" 
               min="1"
               max={maxVerses}
-              value={state.startAyah}
+              value={startInput}
               onChange={(e) => {
+                setStartInput(e.target.value);
                 const value = parseInt(e.target.value, 10);
-                updateState({ startAyah: Number.isNaN(value) ? 1 : value });
+                if (!Number.isNaN(value) && value > 0 && value <= maxVerses) {
+                  updateState({ startAyah: value });
+                }
               }}
               className="w-full bg-black/40 border border-white/5 p-4 rounded-2xl focus:border-primary/50 focus:ring-4 focus:ring-primary/10 outline-none transition-all text-sm font-bold text-white shadow-inner"
             />
@@ -80,12 +92,15 @@ export function SurahSelector() {
           <div className="relative group">
             <input 
               type="number" 
-              min={state.startAyah}
+              min="1"
               max={maxVerses}
-              value={state.endAyah}
+              value={endInput}
               onChange={(e) => {
+                setEndInput(e.target.value);
                 const value = parseInt(e.target.value, 10);
-                updateState({ endAyah: Number.isNaN(value) ? state.startAyah : value });
+                if (!Number.isNaN(value) && value > 0 && value <= maxVerses) {
+                  updateState({ endAyah: value });
+                }
               }}
               className="w-full bg-black/40 border border-white/5 p-4 rounded-2xl focus:border-primary/50 focus:ring-4 focus:ring-primary/10 outline-none transition-all text-sm font-bold text-white shadow-inner"
             />
