@@ -18,18 +18,18 @@ export const metadata: Metadata = {
     template: "%s | قرآن"
   },
   description: "استوديو احترافي لتصميم فيديوهات القرآن الكريم، الاستماع للمشايخ، متابعة مواقيت الصلاة، وقراءة الورد اليومي. كل ما تحتاجه في تطبيق واحد وبجودة عالية.",
+  authors: [{ name: "قرآن" }],
+  creator: "قرآن",
+  publisher: "قرآن",
   keywords: [
     "قرآن", "قرآن كريم", "فيديوهات قرآن", "صانع فيديوهات القرآن", "تطبيق قرآن", 
     "مواقيت الصلاة", "المكتبة الصوتية", "العفاسي", "المنشاوي", "تصميم قرآن", "Video Editor",
     "Quran", "Quran Studio", "Quran Video Maker", "Prayer Times", "Islamic App", "Holy Quran"
   ],
-  authors: [{ name: "Quran Studio Team" }],
-  creator: "Quran Studio",
-  publisher: "Quran Studio",
   openGraph: {
     title: "قرآن",
     description: "استوديو احترافي لتصميم فيديوهات القرآن الكريم، الاستماع للمشايخ، ومتابعة مواقيت الصلاة.",
-    siteName: "Quran Studio",
+    siteName: "قرآن",
     locale: "ar_EG",
     type: "website",
   },

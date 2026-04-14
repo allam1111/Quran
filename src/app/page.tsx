@@ -38,7 +38,7 @@ export default function Home() {
                         </div>
                         <div>
                             <h1 className="text-lg font-bold text-white gold-shimmer bg-clip-text">صانع الفيديوهات</h1>
-                            <p className="text-[10px] text-primary/60 font-medium uppercase tracking-[0.1em]">QURAN STUDIO PRO</p>
+                            <p className="text-[10px] text-primary/60 font-medium uppercase tracking-[0.1em]">قرآن</p>
                         </div>
                     </div>
                 </div>
