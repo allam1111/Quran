@@ -115,7 +115,7 @@ export function PrayerTimes() {
   const nextPrayer = getNextPrayer();
 
   return (
-    <div className="flex flex-col h-full bg-[#050505] p-6 md:p-12 animate-in slide-in-from-right duration-700 overflow-y-auto no-scrollbar pb-32">
+    <div className="flex flex-col h-full bg-[#050505] p-6 md:p-12 animate-in slide-in-from-right duration-700 overflow-y-auto no-scrollbar overscroll-contain pb-32">
       <div className="max-w-4xl mx-auto w-full flex flex-col gap-12">
         
         {/* Modern Header */}

@@ -75,7 +75,7 @@ export function Mushaf() {
         </header> */}
 
         {/* Scrollable Content */}
-        <div className="flex-1 overflow-y-auto p-6 md:p-12 no-scrollbar">
+        <div className="flex-1 overflow-y-auto p-6 md:p-12 no-scrollbar overscroll-contain">
             <div className="max-w-7xl mx-auto flex flex-col gap-8 pb-20">
                 
                 {/* Continue Reading Bookmark Section */}
@@ -148,7 +148,7 @@ export function Mushaf() {
           </div>
       </header>
 
-      <div className="flex-1 overflow-y-auto p-6 md:p-16 pb-48 no-scrollbar scroll-smooth">
+      <div className="flex-1 overflow-y-auto p-6 md:p-16 pb-48 no-scrollbar scroll-smooth overscroll-contain">
           <div className="max-w-3xl mx-auto">
             {loading ? (
                  <div className="flex flex-col items-center justify-center p-20 gap-6">

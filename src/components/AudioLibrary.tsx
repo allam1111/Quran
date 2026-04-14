@@ -182,7 +182,7 @@ export function AudioLibrary() {
       </header>
 
       {/* Main Player */}
-      <main className="flex-1 flex flex-col items-center justify-center px-8 relative z-10 overflow-y-auto no-scrollbar py-10">
+      <main className="flex-1 flex flex-col items-center justify-center px-8 relative z-10 overflow-y-auto no-scrollbar overscroll-contain py-10">
         
         {/* Cover Art */}
         <div className="relative mb-6">
@@ -284,7 +284,7 @@ export function AudioLibrary() {
             <input value={search} onChange={(e) => setSearch(e.target.value)} placeholder="ابحث عن سورة..."
               className="w-full bg-white/5 border border-white/10 rounded-2xl py-4 pr-12 pl-4 text-white outline-none focus:border-primary/50 text-right" />
           </div>
-          <div className="flex-1 overflow-y-auto no-scrollbar space-y-2">
+          <div className="flex-1 overflow-y-auto no-scrollbar overscroll-contain space-y-2">
             {filteredSurahs.map(surah => (
               <button key={surah.id} onClick={() => playSurah(surah)}
                 className={`w-full flex items-center justify-between p-5 rounded-2xl transition-all ${currentSurah.id === surah.id ? 'bg-primary/10 border border-primary/20' : 'hover:bg-white/5 border border-transparent'}`}>
