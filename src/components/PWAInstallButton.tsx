@@ -11,15 +11,26 @@ export function PWAInstallButton() {
     const handler = (e: any) => {
       e.preventDefault();
       setDeferredPrompt(e);
+      console.log("PWA prompt deferred");
+    };
+
+    const installedHandler = () => {
+      setIsInstalled(true);
+      setDeferredPrompt(null);
+      localStorage.setItem("pwa_installed", "true");
     };
 
     window.addEventListener("beforeinstallprompt", handler);
+    window.addEventListener("appinstalled", installedHandler);
 
-    if (window.matchMedia("(display-mode: standalone)").matches || (navigator as any).standalone) {
+    if (window.matchMedia("(display-mode: standalone)").matches || (navigator as any).standalone || localStorage.getItem("pwa_installed") === "true") {
       setIsInstalled(true);
     }
 
-    return () => window.removeEventListener("beforeinstallprompt", handler);
+    return () => {
+      window.removeEventListener("beforeinstallprompt", handler);
+      window.removeEventListener("appinstalled", installedHandler);
+    };
   }, []);
 
   const handleInstall = async () => {
@@ -28,6 +39,7 @@ export function PWAInstallButton() {
       const { outcome } = await deferredPrompt.userChoice;
       if (outcome === "accepted") {
         setIsInstalled(true);
+        localStorage.setItem("pwa_installed", "true");
       }
       setDeferredPrompt(null);
     }
@@ -40,10 +52,10 @@ export function PWAInstallButton() {
   return (
     <button
       onClick={handleInstall}
-      className="flex items-center gap-2 bg-primary text-black px-4 py-2 rounded-xl transition-all hover:scale-105 active:scale-95 shadow-lg shadow-primary/20 font-bold text-xs font-arabic"
+      className="flex items-center gap-2 bg-primary/90 text-black px-3 py-1.5 rounded-lg transition-all hover:bg-primary hover:scale-105 active:scale-95 shadow-lg shadow-primary/10 font-bold text-[10px] font-arabic"
     >
-      <Download className="w-4 h-4" />
-      <span>تثبيت التطبيق</span>
+      <Download className="w-3 h-3" />
+      <span>تثبيت</span>
     </button>
   );
 }
